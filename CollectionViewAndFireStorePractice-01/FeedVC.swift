@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 private let reuseIdentifier = "Cell"
 
@@ -64,6 +65,13 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
         basckets.append(newBascket)
         
         collectionView?.reloadData()
+    }
+    
+    func getDataFromDatabase() {
+        
+        
+        
+        
     }
 }
 
