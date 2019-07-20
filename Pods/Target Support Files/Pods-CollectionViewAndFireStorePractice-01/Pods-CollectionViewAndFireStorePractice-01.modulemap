@@ -1,0 +1,6 @@
+framework module Pods_CollectionViewAndFireStorePractice_01 {
+  umbrella header "Pods-CollectionViewAndFireStorePractice-01-umbrella.h"
+
+  export *
+  module * { export * }
+}
