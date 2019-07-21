@@ -14,10 +14,11 @@ class FeedCell: UICollectionViewCell {
         didSet {
             guard let bascketName = bascket?.bascketName else { return }
             guard let items = bascket?.items else { return }
-            
+            guard let firstItem = items[0].itemName else { return }
+            guard let secondItem = items[1].itemName else { return }
             bascketLabel.text = bascketName
-            itemOneLabel.text = items[0].itemName
-            itemTwoLabel.text = items[1].itemName
+            itemOneLabel.text = firstItem
+            itemTwoLabel.text = secondItem
         }
     }
     
