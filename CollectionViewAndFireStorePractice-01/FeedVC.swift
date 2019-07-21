@@ -52,6 +52,7 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
         cell.bascket = basckets[indexPath.item]
+        print("*** DEBUG *** Count after Cell: \(basckets.count)")
         return cell
     }
     
@@ -122,16 +123,10 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
                                 let itemName = item.itemName as? String ?? ""
                                 print("*** DEBUG *** Item name: \(itemName)")
                             }
+                            self.collectionView?.reloadData()
                         }
+//                        self.collectionView?.reloadData()
                     }
-//                    let newBascket = Bascket(bascketName: bascketName, items: self.items)
-//                    self.basckets.append(newBascket)
-//
-//                    print("bascket name: \(bascketName)")
-//                    print("num of items: \(self.items.count)")
-//                    for item in self.items {
-//                        print("item name: \(item.itemName)")
-//                    }
                     
 //                    self.getDetailDataFromDatabase(with: documentId, handler: { (items) in
 //
@@ -166,7 +161,7 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 //                    let newBascket = Bascket(bascketName: bascketName, items: self.items)
 //                    self.basckets.append(newBascket)
                 }
-                self.collectionView?.reloadData()
+//                self.collectionView?.reloadData()
             }
         }
     }
